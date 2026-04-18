@@ -79,11 +79,29 @@ jobs:
 
       - name: Build and Test
         run: |
-          xcodebuild clean test \
+          set -o pipefail
+
+          if ! xcodebuild clean test \
             -project FoodJournalApp.xcodeproj \
             -scheme FoodJournalApp \
             -sdk iphonesimulator \
             -destination "${{ steps.simulator.outputs.destination }}" \
             CODE_SIGN_IDENTITY="" \
             CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGNING_ALLOWED=NO
+            CODE_SIGNING_ALLOWED=NO \
+            2>&1 | tee xcodebuild.log; then
+            grep -E "^[^:]+:[0-9]+:[0-9]+: error: " xcodebuild.log | while IFS= read -r line; do
+              file_path="$(printf '%s' "$line" | sed -E 's#^(.+):([0-9]+):([0-9]+): error: (.*)$#\1#')"
+              line_number="$(printf '%s' "$line" | sed -E 's#^(.+):([0-9]+):([0-9]+): error: (.*)$#\2#')"
+              column_number="$(printf '%s' "$line" | sed -E 's#^(.+):([0-9]+):([0-9]+): error: (.*)$#\3#')"
+              message="$(printf '%s' "$line" | sed -E 's#^(.+):([0-9]+):([0-9]+): error: (.*)$#\4#')"
+              echo "::error file=$file_path,line=$line_number,col=$column_number::$message"
+            done
+
+            grep -E "xcodebuild: error:|Testing failed:|Test Case '-\\[.*\\]' failed" xcodebuild.log | while IFS= read -r line; do
+              echo "::error::$line"
+            done
+
+            tail -n 200 xcodebuild.log
+            exit 1
+          fi
