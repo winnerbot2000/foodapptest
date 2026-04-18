@@ -1,5 +1,6 @@
 import Foundation
 import Combine
+import SwiftUI
 import PhotosUI
 
 struct VisitSummary: Identifiable, Hashable {
