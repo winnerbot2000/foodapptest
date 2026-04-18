@@ -49,19 +49,21 @@ struct DishDetailView: View {
     }
 
     private func headerSection(dish: Dish) -> some View {
-        HStack {
-            Text(dish.name)
-                .font(AppTypography.title)
-            Spacer()
-            Button(action: toggleWishlist) {
-                Image(systemName: dish.wishlist ? "bookmark.fill" : "bookmark")
-                    .foregroundColor(AppColors.wishlist)
-            }
-        }
         VStack(alignment: .leading, spacing: AppSpacing.xs) {
+            HStack {
+                Text(dish.name)
+                    .font(AppTypography.title)
+                Spacer()
+                Button(action: toggleWishlist) {
+                    Image(systemName: dish.wishlist ? "bookmark.fill" : "bookmark")
+                        .foregroundColor(AppColors.wishlist)
+                }
+            }
+
             Text(dish.category.displayName)
                 .font(AppTypography.subheadline)
                 .foregroundColor(AppColors.secondary)
+
             if let sub = dish.subcategory, !sub.isEmpty {
                 Text(sub)
                     .font(AppTypography.subheadline)

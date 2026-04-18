@@ -133,13 +133,13 @@ struct MenuScanReviewSheet: View {
                         TextField("Price (Optional)", text: $item.priceText)
                             .keyboardType(.decimalPad)
 
-                        if let category = item.category.wrappedValue, !category.isEmpty {
+                        if let category = item.category, !category.isEmpty {
                             Text("Category: \(category)")
                                 .font(AppTypography.caption)
                                 .foregroundColor(AppColors.secondary)
                         }
 
-                        if let confidence = item.ocrConfidence.wrappedValue {
+                        if let confidence = item.ocrConfidence {
                             Text("OCR confidence: \(Int((confidence * 100).rounded()))%")
                                 .font(AppTypography.caption)
                                 .foregroundColor(AppColors.secondary)
