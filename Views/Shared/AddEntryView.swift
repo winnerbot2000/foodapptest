@@ -366,21 +366,27 @@ struct AddEntryView: View {
                     .font(AppTypography.caption)
                     .foregroundColor(AppColors.secondary)
 
-                ForEach($stagedMenuItems) { $item in
+                ForEach(stagedMenuItems.indices, id: \.self) { index in
+                    let itemID = stagedMenuItems[index].id
+
                     VStack(alignment: .leading, spacing: AppSpacing.sm) {
-                        TextField("Item Name", text: $item.name)
+                        TextField("Item Name", text: $stagedMenuItems[index].name)
 
                         TextField(
                             "Price (Optional)",
                             text: Binding(
-                                get: { item.priceText.wrappedValue ?? "" },
-                                set: { item.priceText.wrappedValue = $0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ? nil : $0 }
+                                get: { stagedMenuItems[index].priceText ?? "" },
+                                set: {
+                                    stagedMenuItems[index].priceText = $0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+                                        ? nil
+                                        : $0
+                                }
                             )
                         )
                         .keyboardType(.decimalPad)
 
                         Button("Remove", role: .destructive) {
-                            stagedMenuItems.removeAll { $0.id == item.id.wrappedValue }
+                            stagedMenuItems.removeAll { $0.id == itemID }
                         }
                         .font(AppTypography.caption)
                     }

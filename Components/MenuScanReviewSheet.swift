@@ -130,8 +130,8 @@ struct MenuScanReviewSheet: View {
 
                         TextField("Item Name", text: $item.name)
 
-                        TextField("Price (Optional)", text: item.priceText)
-                        .keyboardType(.decimalPad)
+                        TextField("Price (Optional)", text: $item.priceText)
+                            .keyboardType(.decimalPad)
 
                         if let category = item.category.wrappedValue, !category.isEmpty {
                             Text("Category: \(category)")
