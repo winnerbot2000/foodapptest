@@ -82,3 +82,8 @@ iOSInjectionProject/
 # Local logs and macOS metadata sidecars
 debug.log
 ._*
+.DS_Store
+
+# Local editor settings
+.idea/
+.vscode/
