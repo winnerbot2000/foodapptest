@@ -29,11 +29,40 @@ Thanks for contributing. This project is a SwiftUI iOS app, so the best contribu
 Run tests in Xcode or with:
 
 ```sh
-destination_id="$(xcodebuild -project FoodJournalApp.xcodeproj -scheme FoodJournalApp -showdestinations 2>/dev/null | ruby -ne 'if $_ =~ /platform:iOS Simulator, id:([^,]+), OS:[^,]+, name:iPhone/; puts $1.strip; exit; end')"
+destination_id="$(python3 - <<'PY'
+import json
+import subprocess
+
+devices = json.loads(
+    subprocess.check_output(
+        ["xcrun", "simctl", "list", "devices", "available", "--json"],
+        text=True,
+    )
+)["devices"]
+
+candidates = []
+for runtime, runtime_devices in devices.items():
+    if "iOS" not in runtime:
+        continue
+    try:
+        version = tuple(int(part) for part in runtime.rsplit("iOS-", 1)[1].split("-"))
+    except (IndexError, ValueError):
+        version = (0,)
+    for device in runtime_devices:
+        name = device.get("name", "")
+        udid = device.get("udid")
+        if device.get("isAvailable") and udid and name.startswith("iPhone"):
+            candidates.append((version, name, udid))
+
+_, _, destination_id = max(candidates)
+print(destination_id)
+PY
+)"
 
 xcodebuild clean test \
   -project FoodJournalApp.xcodeproj \
   -scheme FoodJournalApp \
+  -sdk iphonesimulator \
   -destination "platform=iOS Simulator,id=${destination_id}" \
   CODE_SIGN_IDENTITY="" \
   CODE_SIGNING_REQUIRED=NO \

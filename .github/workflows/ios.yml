@@ -30,11 +30,47 @@ jobs:
       - name: Select simulator destination
         id: simulator
         run: |
-          destination_id="$(xcodebuild -project FoodJournalApp.xcodeproj -scheme FoodJournalApp -showdestinations 2>/dev/null | ruby -ne 'if $_ =~ /platform:iOS Simulator, id:([^,]+), OS:[^,]+, name:iPhone/; puts $1.strip; exit; end')"
+          destination_id="$(python3 - <<'PY'
+          import json
+          import subprocess
+          import sys
+
+          devices = json.loads(
+              subprocess.check_output(
+                  ["xcrun", "simctl", "list", "devices", "available", "--json"],
+                  text=True,
+              )
+          )["devices"]
+
+          candidates = []
+          for runtime, runtime_devices in devices.items():
+              if "iOS" not in runtime:
+                  continue
+
+              try:
+                  version = tuple(
+                      int(part) for part in runtime.rsplit("iOS-", 1)[1].split("-")
+                  )
+              except (IndexError, ValueError):
+                  version = (0,)
+
+              for device in runtime_devices:
+                  name = device.get("name", "")
+                  udid = device.get("udid")
+                  if device.get("isAvailable") and udid and name.startswith("iPhone"):
+                      candidates.append((version, name, udid))
+
+          if not candidates:
+              sys.exit("No available iPhone simulator destination was found.")
+
+          _, _, udid = max(candidates)
+          print(udid)
+          PY
+          )"
 
           if [ -z "$destination_id" ]; then
             echo "No available iPhone simulator destination was found."
-            xcodebuild -project FoodJournalApp.xcodeproj -scheme FoodJournalApp -showdestinations
+            xcrun simctl list devices available
             exit 1
           fi
 
@@ -46,6 +82,7 @@ jobs:
           xcodebuild clean test \
             -project FoodJournalApp.xcodeproj \
             -scheme FoodJournalApp \
+            -sdk iphonesimulator \
             -destination "${{ steps.simulator.outputs.destination }}" \
             CODE_SIGN_IDENTITY="" \
             CODE_SIGNING_REQUIRED=NO \
