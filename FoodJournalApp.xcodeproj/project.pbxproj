@@ -1,0 +1,702 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		510000000000000000000000 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500000000000000000000000 /* PhotosUI.framework */; };
+		510000000000000000000001 /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500000000000000000000001 /* Vision.framework */; };
+		510000000000000000000002 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500000000000000000000002 /* CoreLocation.framework */; };
+		510000000000000000000003 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500000000000000000000003 /* XCTest.framework */; };
+		520000000000000000000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 520000000000000000000000 /* Assets.xcassets */; };
+		530000000000000000000001 /* FoodJournalAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530000000000000000000000 /* FoodJournalAppTests.swift */; };
+		700000000000000000000001 /* FoodJournalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000001 /* FoodJournalApp.swift */; };
+		700000000000000000000002 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000002 /* CardView.swift */; };
+		700000000000000000000003 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000003 /* EmptyStateView.swift */; };
+		700000000000000000000004 /* RatingSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000004 /* RatingSlider.swift */; };
+		700000000000000000000005 /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000005 /* TagListView.swift */; };
+		700000000000000000000006 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000006 /* Colors.swift */; };
+		700000000000000000000007 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000007 /* Spacing.swift */; };
+		700000000000000000000008 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000008 /* Typography.swift */; };
+		700000000000000000000009 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000009 /* Dish.swift */; };
+		700000000000000000000010 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000010 /* Enums.swift */; };
+		700000000000000000000011 /* FoodEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000011 /* FoodEntry.swift */; };
+		700000000000000000000012 /* MenuRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000012 /* MenuRecord.swift */; };
+		700000000000000000000013 /* ParsedMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000013 /* ParsedMenuItem.swift */; };
+		700000000000000000000014 /* RatingBreakdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000014 /* RatingBreakdown.swift */; };
+		700000000000000000000015 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000015 /* Restaurant.swift */; };
+		700000000000000000000016 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000016 /* AnalyticsService.swift */; };
+		700000000000000000000017 /* MenuScannerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000017 /* MenuScannerProtocol.swift */; };
+		700000000000000000000018 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000018 /* SampleData.swift */; };
+		700000000000000000000019 /* VisionMenuScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000019 /* VisionMenuScanner.swift */; };
+		700000000000000000000020 /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000020 /* DataRepository.swift */; };
+		700000000000000000000021 /* JSONFileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000021 /* JSONFileStore.swift */; };
+		700000000000000000000022 /* StorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000022 /* StorageKeys.swift */; };
+		700000000000000000000023 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000023 /* AppState.swift */; };
+		700000000000000000000024 /* AddDishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000024 /* AddDishView.swift */; };
+		700000000000000000000025 /* DishDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000025 /* DishDetailView.swift */; };
+		700000000000000000000026 /* DishRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000026 /* DishRow.swift */; };
+		700000000000000000000027 /* DishesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000027 /* DishesView.swift */; };
+		700000000000000000000028 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000028 /* HomeView.swift */; };
+		700000000000000000000029 /* InsightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000029 /* InsightsView.swift */; };
+		700000000000000000000030 /* EntryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000030 /* EntryDetailView.swift */; };
+		700000000000000000000031 /* EntryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000031 /* EntryRow.swift */; };
+		700000000000000000000032 /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000032 /* JournalView.swift */; };
+		700000000000000000000033 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000033 /* MainTabView.swift */; };
+		700000000000000000000034 /* AddRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000034 /* AddRestaurantView.swift */; };
+		700000000000000000000035 /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000035 /* RestaurantDetailView.swift */; };
+		700000000000000000000036 /* RestaurantRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000036 /* RestaurantRow.swift */; };
+		700000000000000000000037 /* RestaurantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000037 /* RestaurantsView.swift */; };
+		700000000000000000000038 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000038 /* SettingsView.swift */; };
+		700000000000000000000039 /* AddEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000039 /* AddEntryView.swift */; };
+		700000000000000000000040 /* PhotoReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000040 /* PhotoReference.swift */; };
+		700000000000000000000041 /* PhotoStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000041 /* PhotoStorageService.swift */; };
+		700000000000000000000042 /* PhotoAttachmentSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000042 /* PhotoAttachmentSection.swift */; };
+		700000000000000000000043 /* PlaceRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000043 /* PlaceRecord.swift */; };
+		700000000000000000000044 /* CurrentLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000044 /* CurrentLocationService.swift */; };
+		700000000000000000000045 /* RecognizedMenuLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000045 /* RecognizedMenuLine.swift */; };
+		700000000000000000000046 /* MenuScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000046 /* MenuScanViewModel.swift */; };
+		700000000000000000000047 /* MenuScanReviewSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000047 /* MenuScanReviewSheet.swift */; };
+		700000000000000000000048 /* BrowseSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000048 /* BrowseSupport.swift */; };
+		700000000000000000000049 /* LocalPhotoThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000049 /* LocalPhotoThumbnailView.swift */; };
+		700000000000000000000050 /* ItemHistoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600000000000000000000050 /* ItemHistoryDetailView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		200000000000000000000015 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 100000000000000000000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 200000000000000000000000;
+			remoteInfo = FoodJournalApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		400000000000000000000000 /* FoodJournalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodJournalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		400000000000000000000001 /* FoodJournalAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodJournalAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		500000000000000000000000 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
+		500000000000000000000001 /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = System/Library/Frameworks/Vision.framework; sourceTree = SDKROOT; };
+		500000000000000000000002 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		500000000000000000000003 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = System/Library/Frameworks/XCTest.framework; sourceTree = SDKROOT; };
+		520000000000000000000000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		520000000000000000000002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		530000000000000000000000 /* FoodJournalAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodJournalAppTests.swift; sourceTree = "<group>"; };
+		600000000000000000000001 /* FoodJournalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodJournalApp.swift; sourceTree = "<group>"; };
+		600000000000000000000002 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		600000000000000000000003 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		600000000000000000000004 /* RatingSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingSlider.swift; sourceTree = "<group>"; };
+		600000000000000000000005 /* TagListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
+		600000000000000000000006 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		600000000000000000000007 /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
+		600000000000000000000008 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		600000000000000000000009 /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		600000000000000000000010 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		600000000000000000000011 /* FoodEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodEntry.swift; sourceTree = "<group>"; };
+		600000000000000000000012 /* MenuRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRecord.swift; sourceTree = "<group>"; };
+		600000000000000000000013 /* ParsedMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsedMenuItem.swift; sourceTree = "<group>"; };
+		600000000000000000000014 /* RatingBreakdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingBreakdown.swift; sourceTree = "<group>"; };
+		600000000000000000000015 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		600000000000000000000016 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
+		600000000000000000000017 /* MenuScannerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScannerProtocol.swift; sourceTree = "<group>"; };
+		600000000000000000000018 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		600000000000000000000019 /* VisionMenuScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionMenuScanner.swift; sourceTree = "<group>"; };
+		600000000000000000000020 /* DataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
+		600000000000000000000021 /* JSONFileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileStore.swift; sourceTree = "<group>"; };
+		600000000000000000000022 /* StorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKeys.swift; sourceTree = "<group>"; };
+		600000000000000000000023 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		600000000000000000000024 /* AddDishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDishView.swift; sourceTree = "<group>"; };
+		600000000000000000000025 /* DishDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailView.swift; sourceTree = "<group>"; };
+		600000000000000000000026 /* DishRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishRow.swift; sourceTree = "<group>"; };
+		600000000000000000000027 /* DishesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesView.swift; sourceTree = "<group>"; };
+		600000000000000000000028 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		600000000000000000000029 /* InsightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsView.swift; sourceTree = "<group>"; };
+		600000000000000000000030 /* EntryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailView.swift; sourceTree = "<group>"; };
+		600000000000000000000031 /* EntryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryRow.swift; sourceTree = "<group>"; };
+		600000000000000000000032 /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
+		600000000000000000000033 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		600000000000000000000034 /* AddRestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRestaurantView.swift; sourceTree = "<group>"; };
+		600000000000000000000035 /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
+		600000000000000000000036 /* RestaurantRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantRow.swift; sourceTree = "<group>"; };
+		600000000000000000000037 /* RestaurantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsView.swift; sourceTree = "<group>"; };
+		600000000000000000000038 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		600000000000000000000039 /* AddEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryView.swift; sourceTree = "<group>"; };
+		600000000000000000000040 /* PhotoReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoReference.swift; sourceTree = "<group>"; };
+		600000000000000000000041 /* PhotoStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStorageService.swift; sourceTree = "<group>"; };
+		600000000000000000000042 /* PhotoAttachmentSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAttachmentSection.swift; sourceTree = "<group>"; };
+		600000000000000000000043 /* PlaceRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRecord.swift; sourceTree = "<group>"; };
+		600000000000000000000044 /* CurrentLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationService.swift; sourceTree = "<group>"; };
+		600000000000000000000045 /* RecognizedMenuLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizedMenuLine.swift; sourceTree = "<group>"; };
+		600000000000000000000046 /* MenuScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScanViewModel.swift; sourceTree = "<group>"; };
+		600000000000000000000047 /* MenuScanReviewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScanReviewSheet.swift; sourceTree = "<group>"; };
+		600000000000000000000048 /* BrowseSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseSupport.swift; sourceTree = "<group>"; };
+		600000000000000000000049 /* LocalPhotoThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPhotoThumbnailView.swift; sourceTree = "<group>"; };
+		600000000000000000000050 /* ItemHistoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemHistoryDetailView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		200000000000000000000003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				510000000000000000000000 /* PhotosUI.framework in Frameworks */,
+				510000000000000000000001 /* Vision.framework in Frameworks */,
+				510000000000000000000002 /* CoreLocation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		200000000000000000000013 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				510000000000000000000003 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		100000000000000000000002 = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000010 /* App */,
+				100000000000000000000011 /* Components */,
+				100000000000000000000012 /* DesignSystem */,
+				100000000000000000000013 /* Models */,
+				100000000000000000000014 /* Services */,
+				100000000000000000000015 /* Storage */,
+				100000000000000000000016 /* ViewModels */,
+				100000000000000000000017 /* Views */,
+				10000000000000000000001F /* Config */,
+				100000000000000000000020 /* Resources */,
+				100000000000000000000021 /* Tests */,
+				100000000000000000000003 /* Products */,
+				100000000000000000000004 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		100000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				400000000000000000000000 /* FoodJournalApp.app */,
+				400000000000000000000001 /* FoodJournalAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		100000000000000000000004 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				500000000000000000000000 /* PhotosUI.framework */,
+				500000000000000000000001 /* Vision.framework */,
+				500000000000000000000002 /* CoreLocation.framework */,
+				500000000000000000000003 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		100000000000000000000010 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				600000000000000000000001 /* FoodJournalApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		100000000000000000000011 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				600000000000000000000002 /* CardView.swift */,
+				600000000000000000000003 /* EmptyStateView.swift */,
+				600000000000000000000049 /* LocalPhotoThumbnailView.swift */,
+				600000000000000000000047 /* MenuScanReviewSheet.swift */,
+				600000000000000000000042 /* PhotoAttachmentSection.swift */,
+				600000000000000000000004 /* RatingSlider.swift */,
+				600000000000000000000005 /* TagListView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		100000000000000000000012 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				600000000000000000000006 /* Colors.swift */,
+				600000000000000000000007 /* Spacing.swift */,
+				600000000000000000000008 /* Typography.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		100000000000000000000013 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				600000000000000000000009 /* Dish.swift */,
+				600000000000000000000010 /* Enums.swift */,
+				600000000000000000000011 /* FoodEntry.swift */,
+				600000000000000000000012 /* MenuRecord.swift */,
+				600000000000000000000013 /* ParsedMenuItem.swift */,
+				600000000000000000000043 /* PlaceRecord.swift */,
+				600000000000000000000040 /* PhotoReference.swift */,
+				600000000000000000000045 /* RecognizedMenuLine.swift */,
+				600000000000000000000014 /* RatingBreakdown.swift */,
+				600000000000000000000015 /* Restaurant.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		100000000000000000000014 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				600000000000000000000016 /* AnalyticsService.swift */,
+				600000000000000000000044 /* CurrentLocationService.swift */,
+				600000000000000000000017 /* MenuScannerProtocol.swift */,
+				600000000000000000000041 /* PhotoStorageService.swift */,
+				600000000000000000000018 /* SampleData.swift */,
+				600000000000000000000019 /* VisionMenuScanner.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		100000000000000000000015 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				600000000000000000000020 /* DataRepository.swift */,
+				600000000000000000000021 /* JSONFileStore.swift */,
+				600000000000000000000022 /* StorageKeys.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		100000000000000000000016 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				600000000000000000000023 /* AppState.swift */,
+				600000000000000000000048 /* BrowseSupport.swift */,
+				600000000000000000000046 /* MenuScanViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		100000000000000000000017 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000018 /* Dishes */,
+				100000000000000000000019 /* Home */,
+				10000000000000000000001A /* Insights */,
+				10000000000000000000001B /* Journal */,
+				600000000000000000000033 /* MainTabView.swift */,
+				10000000000000000000001C /* Restaurants */,
+				10000000000000000000001D /* Settings */,
+				10000000000000000000001E /* Shared */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		100000000000000000000018 /* Dishes */ = {
+			isa = PBXGroup;
+			children = (
+				600000000000000000000024 /* AddDishView.swift */,
+				600000000000000000000025 /* DishDetailView.swift */,
+				600000000000000000000026 /* DishRow.swift */,
+				600000000000000000000027 /* DishesView.swift */,
+			);
+			path = Dishes;
+			sourceTree = "<group>";
+		};
+		100000000000000000000019 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				600000000000000000000028 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		10000000000000000000001A /* Insights */ = {
+			isa = PBXGroup;
+			children = (
+				600000000000000000000029 /* InsightsView.swift */,
+			);
+			path = Insights;
+			sourceTree = "<group>";
+		};
+		10000000000000000000001B /* Journal */ = {
+			isa = PBXGroup;
+			children = (
+				600000000000000000000030 /* EntryDetailView.swift */,
+				600000000000000000000031 /* EntryRow.swift */,
+				600000000000000000000032 /* JournalView.swift */,
+			);
+			path = Journal;
+			sourceTree = "<group>";
+		};
+		10000000000000000000001C /* Restaurants */ = {
+			isa = PBXGroup;
+			children = (
+				600000000000000000000034 /* AddRestaurantView.swift */,
+				600000000000000000000035 /* RestaurantDetailView.swift */,
+				600000000000000000000036 /* RestaurantRow.swift */,
+				600000000000000000000037 /* RestaurantsView.swift */,
+			);
+			path = Restaurants;
+			sourceTree = "<group>";
+		};
+		10000000000000000000001D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				600000000000000000000038 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		10000000000000000000001E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				600000000000000000000039 /* AddEntryView.swift */,
+				600000000000000000000050 /* ItemHistoryDetailView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		10000000000000000000001F /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				520000000000000000000002 /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		100000000000000000000020 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				520000000000000000000000 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		100000000000000000000021 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				530000000000000000000000 /* FoodJournalAppTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		200000000000000000000000 /* FoodJournalApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 200000000000000000000001 /* Build configuration list for PBXNativeTarget "FoodJournalApp" */;
+			buildPhases = (
+				200000000000000000000002 /* Sources */,
+				200000000000000000000003 /* Frameworks */,
+				200000000000000000000004 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FoodJournalApp;
+			packageProductDependencies = (
+			);
+			productName = FoodJournalApp;
+			productReference = 400000000000000000000000 /* FoodJournalApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		200000000000000000000010 /* FoodJournalAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 200000000000000000000011 /* Build configuration list for PBXNativeTarget "FoodJournalAppTests" */;
+			buildPhases = (
+				200000000000000000000012 /* Sources */,
+				200000000000000000000013 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				200000000000000000000014 /* PBXTargetDependency */,
+			);
+			name = FoodJournalAppTests;
+			packageProductDependencies = (
+			);
+			productName = FoodJournalAppTests;
+			productReference = 400000000000000000000001 /* FoodJournalAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		100000000000000000000000 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					200000000000000000000000 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					200000000000000000000010 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 200000000000000000000000;
+					};
+				};
+			};
+			buildConfigurationList = 100000000000000000000001 /* Build configuration list for PBXProject "FoodJournalApp" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 100000000000000000000002;
+			productRefGroup = 100000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				200000000000000000000000 /* FoodJournalApp */,
+				200000000000000000000010 /* FoodJournalAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		200000000000000000000004 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				520000000000000000000001 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		200000000000000000000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				700000000000000000000001 /* FoodJournalApp.swift in Sources */,
+				700000000000000000000002 /* CardView.swift in Sources */,
+				700000000000000000000003 /* EmptyStateView.swift in Sources */,
+				700000000000000000000004 /* RatingSlider.swift in Sources */,
+				700000000000000000000005 /* TagListView.swift in Sources */,
+				700000000000000000000006 /* Colors.swift in Sources */,
+				700000000000000000000007 /* Spacing.swift in Sources */,
+				700000000000000000000008 /* Typography.swift in Sources */,
+				700000000000000000000009 /* Dish.swift in Sources */,
+				700000000000000000000010 /* Enums.swift in Sources */,
+				700000000000000000000011 /* FoodEntry.swift in Sources */,
+				700000000000000000000012 /* MenuRecord.swift in Sources */,
+				700000000000000000000013 /* ParsedMenuItem.swift in Sources */,
+				700000000000000000000014 /* RatingBreakdown.swift in Sources */,
+				700000000000000000000015 /* Restaurant.swift in Sources */,
+				700000000000000000000016 /* AnalyticsService.swift in Sources */,
+				700000000000000000000017 /* MenuScannerProtocol.swift in Sources */,
+				700000000000000000000018 /* SampleData.swift in Sources */,
+				700000000000000000000019 /* VisionMenuScanner.swift in Sources */,
+				700000000000000000000020 /* DataRepository.swift in Sources */,
+				700000000000000000000021 /* JSONFileStore.swift in Sources */,
+				700000000000000000000022 /* StorageKeys.swift in Sources */,
+				700000000000000000000023 /* AppState.swift in Sources */,
+				700000000000000000000024 /* AddDishView.swift in Sources */,
+				700000000000000000000025 /* DishDetailView.swift in Sources */,
+				700000000000000000000026 /* DishRow.swift in Sources */,
+				700000000000000000000027 /* DishesView.swift in Sources */,
+				700000000000000000000028 /* HomeView.swift in Sources */,
+				700000000000000000000029 /* InsightsView.swift in Sources */,
+				700000000000000000000030 /* EntryDetailView.swift in Sources */,
+				700000000000000000000031 /* EntryRow.swift in Sources */,
+				700000000000000000000032 /* JournalView.swift in Sources */,
+				700000000000000000000033 /* MainTabView.swift in Sources */,
+				700000000000000000000034 /* AddRestaurantView.swift in Sources */,
+				700000000000000000000035 /* RestaurantDetailView.swift in Sources */,
+				700000000000000000000036 /* RestaurantRow.swift in Sources */,
+				700000000000000000000037 /* RestaurantsView.swift in Sources */,
+				700000000000000000000038 /* SettingsView.swift in Sources */,
+				700000000000000000000039 /* AddEntryView.swift in Sources */,
+				700000000000000000000040 /* PhotoReference.swift in Sources */,
+				700000000000000000000041 /* PhotoStorageService.swift in Sources */,
+				700000000000000000000042 /* PhotoAttachmentSection.swift in Sources */,
+				700000000000000000000043 /* PlaceRecord.swift in Sources */,
+				700000000000000000000044 /* CurrentLocationService.swift in Sources */,
+				700000000000000000000045 /* RecognizedMenuLine.swift in Sources */,
+				700000000000000000000046 /* MenuScanViewModel.swift in Sources */,
+				700000000000000000000047 /* MenuScanReviewSheet.swift in Sources */,
+				700000000000000000000048 /* BrowseSupport.swift in Sources */,
+				700000000000000000000049 /* LocalPhotoThumbnailView.swift in Sources */,
+				700000000000000000000050 /* ItemHistoryDetailView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		200000000000000000000012 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				530000000000000000000001 /* FoodJournalAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		200000000000000000000014 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 200000000000000000000000 /* FoodJournalApp */;
+			targetProxy = 200000000000000000000015 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		300000000000000000000000 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		300000000000000000000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		300000000000000000000010 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Config/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.foodjournalapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		300000000000000000000011 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Config/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.foodjournalapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		300000000000000000000020 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.foodjournalapp.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoodJournalApp.app/FoodJournalApp";
+				TEST_TARGET_NAME = FoodJournalApp;
+			};
+			name = Debug;
+		};
+		300000000000000000000021 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.foodjournalapp.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoodJournalApp.app/FoodJournalApp";
+				TEST_TARGET_NAME = FoodJournalApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		100000000000000000000001 /* Build configuration list for PBXProject "FoodJournalApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				300000000000000000000000 /* Debug */,
+				300000000000000000000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		200000000000000000000001 /* Build configuration list for PBXNativeTarget "FoodJournalApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				300000000000000000000010 /* Debug */,
+				300000000000000000000011 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		200000000000000000000011 /* Build configuration list for PBXNativeTarget "FoodJournalAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				300000000000000000000020 /* Debug */,
+				300000000000000000000021 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 100000000000000000000000 /* Project object */;
+}
