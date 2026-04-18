@@ -146,7 +146,7 @@ struct MenuScanReviewSheet: View {
                         }
 
                         Button("Remove", role: .destructive) {
-                            viewModel.removeDraft(id: item.id.wrappedValue)
+                            viewModel.removeDraft(id: item.id)
                         }
                         .font(AppTypography.caption)
                     }
