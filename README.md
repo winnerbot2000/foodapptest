@@ -87,6 +87,25 @@ xcodebuild clean test \
   CODE_SIGNING_ALLOWED=NO
 ```
 
+## Build an Installable IPA
+
+A real iPhone build must be signed for `iphoneos`, so the repository now includes a manual GitHub Actions job that archives the app and exports a signed `.ipa` artifact for device testing.
+
+Before running it, configure your Apple signing assets:
+
+1. Create an App ID and a matching development or ad-hoc provisioning profile in the Apple Developer portal.
+2. Export the signing certificate you want to use as a `.p12` file.
+3. Add the `IOS_BUNDLE_IDENTIFIER` repository variable in GitHub. Use your real app identifier here, because the Xcode project currently defaults to the placeholder `com.example.foodjournalapp`.
+4. Add these repository secrets in GitHub:
+   - `IOS_CERTIFICATE_P12_BASE64`
+   - `IOS_CERTIFICATE_PASSWORD`
+   - `IOS_PROVISIONING_PROFILE_BASE64`
+5. Base64-encode the `.p12` and `.mobileprovision` files before storing them in secrets.
+6. Open `Actions` -> `iOS CI and IPA` -> `Run workflow`, then choose `development` or `ad-hoc`.
+7. Download the `FoodJournalApp-ipa` artifact from the completed workflow run.
+
+For physical-device testing, the provisioning profile must include the target iPhone's UDID. The workflow gives you the signed `.ipa`, but installation still needs a supported distribution path such as Xcode, Apple Configurator, or ad-hoc/TestFlight delivery.
+
 ## Privacy Notes
 
 - Journal data is persisted locally through JSON files.
@@ -113,7 +132,10 @@ Tests/          XCTest coverage
 
 ## GitHub Workflow
 
-The repository includes a GitHub Actions workflow at `.github/workflows/ios.yml` that builds and tests the shared Xcode scheme on `main` pushes and pull requests, selecting an available iPhone simulator dynamically on the runner.
+The repository includes a GitHub Actions workflow at `.github/workflows/ios.yml` that:
+
+- builds and tests the shared Xcode scheme on `main` pushes and pull requests using an available iPhone simulator
+- can be run manually to archive the app for `iphoneos` and export a signed `.ipa` artifact for physical devices
 
 ## Contributing
 
