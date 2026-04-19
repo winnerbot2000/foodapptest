@@ -95,7 +95,7 @@ Before running it, configure your Apple signing assets:
 
 1. Create an App ID and a matching development or ad-hoc provisioning profile in the Apple Developer portal.
 2. Export the signing certificate you want to use as a `.p12` file.
-3. Add the `IOS_BUNDLE_IDENTIFIER` repository variable in GitHub. Use your real app identifier here, because the Xcode project currently defaults to the placeholder `com.example.foodjournalapp`.
+3. Add the `IOS_BUNDLE_IDENTIFIER` repository variable in GitHub. The project now defaults to `com.winnerbot2000.foodjournalapp`, and your Apple App ID and provisioning profile should match it unless you intentionally choose a different identifier.
 4. Add these repository secrets in GitHub:
    - `IOS_CERTIFICATE_P12_BASE64`
    - `IOS_CERTIFICATE_PASSWORD`

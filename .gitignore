@@ -87,3 +87,12 @@ debug.log
 # Local editor settings
 .idea/
 .vscode/
+
+# Local Apple signing materials
+.signing-local/
+*.p12
+*.pfx
+*.cer
+*.csr
+*.mobileprovision
+*.key
